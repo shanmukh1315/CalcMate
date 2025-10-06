@@ -43,3 +43,8 @@ def test_cli_divide_by_zero():
 def test_cli_invalid_operation_then_exit():
     out = run_cli_with(["pow", "2 3", "exit"])
     assert "Unsupported operation" in out
+
+def test_cli_history_when_empty():
+    out = run_cli_with(["history", "exit"])
+    assert "No calculations yet." in out
+    assert "Goodbye!" in out

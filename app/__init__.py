@@ -1,1 +1,2 @@
-"""App package initializer for CalcMate."""
+if __name__ == "__main__":  # pragma: no cover
+    main()
