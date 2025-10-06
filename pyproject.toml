@@ -1,0 +1,11 @@
+[project]
+name = "calcmate"
+version = "0.1.0"
+description = "Modular CLI calculator with tests & CI (100% coverage)."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+addopts = "--cov=app --cov-report=term-missing -q"
+pythonpath = ["."]
+testpaths = ["tests"]
+
