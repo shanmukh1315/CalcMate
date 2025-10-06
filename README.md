@@ -10,23 +10,23 @@ CalcMate demonstrates clean architecture, error handling, and **100% automated t
 
 ## 🚀 Features
 
-✅ **REPL (Read–Eval–Print Loop)** for continuous user interaction  
-✅ **Arithmetic Operations:** Addition, Subtraction, Multiplication, Division  
-✅ **Special Commands:** `help`, `history`, `exit`  
-✅ **Comprehensive Error Handling:**  
+**REPL (Read–Eval–Print Loop)** for continuous user interaction  
+**Arithmetic Operations:** Addition, Subtraction, Multiplication, Division  
+**Special Commands:** `help`, `history`, `exit`  
+**Comprehensive Error Handling:**  
 - Invalid inputs  
 - Unsupported operations  
 - Division by zero  
-✅ **CalculationFactory Class:** Creates `Calculation` instances from user input  
-✅ **History Management:** Tracks all previous calculations during the session  
-✅ **Full Unit Testing:** 100% code coverage with `pytest`  
-✅ **Continuous Integration (CI):** GitHub Actions enforces coverage and testing
+**CalculationFactory Class:** Creates `Calculation` instances from user input  
+**History Management:** Tracks all previous calculations during the session  
+**Full Unit Testing:** 100% code coverage with `pytest`  
+**Continuous Integration (CI):** GitHub Actions enforces coverage and testing
 
 ---
 
 ## 🧩 Project Structure
 
-```plaintext
+
 CalcMate/
 ├── app/
 │   ├── calculator/
@@ -55,33 +55,28 @@ CalcMate/
 ## ⚙️ Setup & Installation
 
 ### 1️⃣ Clone the Repository
-```bash
+
 git clone https://github.com/shanmukh1315/CalcMate.git
 cd CalcMate
 
-├── pyproject.toml # Project + pytest configuration
-├── .gitignore # Ignore venv, caches, coverage, etc.
-└── README.md # Documentation
 
 ### 2️⃣ Create & Activate Virtual Environment
-```bash
+
 python -m venv .venv
 source .venv/bin/activate      # macOS / Linux
-# or
-.venv\Scripts\activate         # Windows
 
 ### 3️⃣ Install Dependencies
-```bash
+
 pip install -r requirements.txt
 # OR (for this assignment)
 pip install pytest pytest-cov
 
 
-Usage (Run the Calculator)
+**Usage (Run the Calculator)**
 python -m app.calculator.cli
 
 
-Example Session:
+**Example Session:**
 Welcome to CalcMate! Type 'help' for instructions.
 Enter operation (+, -, *, /) or command (help, history, exit): +
 Enter numbers separated by spaces: 5 10 15
@@ -92,18 +87,18 @@ Enter operation (+, -, *, /) or command (help, history, exit): exit
 Goodbye!
 
 
-Testing
+**Testing**
 
 Run all tests with coverage:
 
 pytest --cov=app --cov-report=term-missing
 
 
-Enforce 100% coverage:
+**Enforce 100% coverage:**
 
 pytest --cov=app --cov-fail-under=100
 
-output:
+**output:**
 ---------- coverage: platform darwin ----------
 Name                          Stmts   Miss  Cover
 -------------------------------------------------
