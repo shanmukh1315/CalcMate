@@ -29,27 +29,26 @@ CalcMate demonstrates clean architecture, error handling, and **100% automated t
 
 CalcMate/
 ├── app/
-│   ├── calculator/
-│   │   ├── __init__.py        # CLI logic (REPL, input parsing, history)
-│   │   └── cli.py
-│   ├── calculation/
-│   │   └── __init__.py        # CalculationFactory + Calculation class
-│   ├── operation/
-│   │   └── __init__.py        # add(), subtract(), multiply(), divide()
-│   └── __init__.py
+│ ├── calculator/
+│ │ ├── init.py # CLI logic (REPL, input parsing, history)
+│ │ └── cli.py
+│ ├── calculation/
+│ │ └── init.py # CalculationFactory + Calculation class
+│ ├── operation/
+│ │ └── init.py # add(), subtract(), multiply(), divide()
+│ └── init.py
 │
 ├── tests/
-│   ├── test_operations.py     # Parameterized tests for arithmetic ops
-│   ├── test_calculations.py   # Factory and Calculation class tests
-│   └── test_cli.py            # REPL and CLI flow tests
+│ ├── test_operations.py # Parameterized tests for arithmetic ops
+│ ├── test_calculations.py # Factory and Calculation class tests
+│ ├── test_cli.py # REPL and CLI input flow tests
 │
-├── .github/
-│   └── workflows/
-│       └── python-app.yml     # GitHub Actions CI config
+├── .github/workflows/
+│ └── python-app.yml # GitHub Actions CI config
 │
-├── pyproject.toml             # Project + pytest configuration
-├── .gitignore                 # Ignore venv, caches, coverage, etc.
-└── README.md                  # Documentation
+├── pyproject.toml # Project + pytest configuration
+├── .gitignore # Ignore venv, caches, coverage, etc.
+└── README.md # Documentation
 
 
 ## ⚙️ Setup & Installation
