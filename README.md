@@ -1,4 +1,4 @@
-# 🧮 CalcMate — Professional Command-Line Calculator
+# CalcMate — Professional Command-Line Calculator
 
 [![CI – Tests & Coverage](https://github.com/shanmukh1315/CalcMate/actions/workflows/python-app.yml/badge.svg)](https://github.com/shanmukh1315/CalcMate/actions)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
@@ -8,7 +8,7 @@ CalcMate demonstrates clean architecture, error handling, and **100% automated t
 
 ---
 
-## 🚀 Features
+## Features
 
 **REPL (Read–Eval–Print Loop)** for continuous user interaction  
 **Arithmetic Operations:** Addition, Subtraction, Multiplication, Division  
@@ -24,7 +24,7 @@ CalcMate demonstrates clean architecture, error handling, and **100% automated t
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 **CalcMate/**
 - **app/**
@@ -48,7 +48,7 @@ CalcMate demonstrates clean architecture, error handling, and **100% automated t
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### 1️⃣ Clone the Repository
 ```bash
@@ -82,7 +82,7 @@ pip install pytest pytest-cov
 
 ---
 
-## ▶️ Usage
+## Usage
 
 Run the calculator:
 
@@ -107,7 +107,7 @@ Goodbye!
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Run all tests with coverage:
 
@@ -121,7 +121,7 @@ Enforce 100% coverage:
 pytest --cov=app --cov-fail-under=100
 ```
 
-Example Coverage Output:
+## Example Coverage Output:
 
 ```bash
 ---------- coverage: platform darwin ----------
