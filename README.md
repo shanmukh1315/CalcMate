@@ -26,78 +26,104 @@ CalcMate demonstrates clean architecture, error handling, and **100% automated t
 
 ## 🧩 Project Structure
 
+**CalcMate/**
+- **app/**
+  - **calculator/**
+    - `__init__.py` → CLI logic (REPL, input parsing, history)
+    - `cli.py`
+  - **calculation/**
+    - `__init__.py` → CalculationFactory + Calculation class
+  - **operation/**
+    - `__init__.py` → add(), subtract(), multiply(), divide()
+  - `__init__.py`
+- **tests/**
+  - `test_operations.py` → Parameterized tests for arithmetic ops  
+  - `test_calculations.py` → Factory and Calculation class tests  
+  - `test_cli.py` → REPL and CLI flow tests  
+- **.github/workflows/**
+  - `python-app.yml` → GitHub Actions CI config  
+- `pyproject.toml` → Project + pytest configuration  
+- `.gitignore` → Ignore venv, caches, coverage, etc.  
+- `README.md` → Documentation  
 
-CalcMate/
-├── app/
-│ ├── calculator/
-│ │ ├── init.py # CLI logic (REPL, input parsing, history)
-│ │ └── cli.py
-│ ├── calculation/
-│ │ └── init.py # CalculationFactory + Calculation class
-│ ├── operation/
-│ │ └── init.py # add(), subtract(), multiply(), divide()
-│ └── init.py
-│
-├── tests/
-│ ├── test_operations.py # Parameterized tests for arithmetic ops
-│ ├── test_calculations.py # Factory and Calculation class tests
-│ ├── test_cli.py # REPL and CLI input flow tests
-│
-├── .github/workflows/
-│ └── python-app.yml # GitHub Actions CI config
-│
-├── pyproject.toml # Project + pytest configuration
-├── .gitignore # Ignore venv, caches, coverage, etc.
-└── README.md # Documentation
-
+---
 
 ## ⚙️ Setup & Installation
 
 ### 1️⃣ Clone the Repository
-
+```bash
 git clone https://github.com/shanmukh1315/CalcMate.git
 cd CalcMate
-
+````
 
 ### 2️⃣ Create & Activate Virtual Environment
 
+**macOS / Linux**
+
+```bash
 python -m venv .venv
-source .venv/bin/activate      # macOS / Linux
+source .venv/bin/activate
+```
+
+**Windows**
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
 ### 3️⃣ Install Dependencies
 
+```bash
 pip install -r requirements.txt
-# OR (for this assignment)
+# OR (for assignment use)
 pip install pytest pytest-cov
+```
 
+---
 
-**Usage (Run the Calculator)**
+## ▶️ Usage
+
+Run the calculator:
+
+```bash
 python -m app.calculator.cli
+```
 
+### Example Session:
 
-**Example Session:**
+```
 Welcome to CalcMate! Type 'help' for instructions.
 Enter operation (+, -, *, /) or command (help, history, exit): +
 Enter numbers separated by spaces: 5 10 15
 Result: 30.0
+
 Enter operation (+, -, *, /) or command (help, history, exit): history
 1: add [5.0, 10.0, 15.0] = 30.0
+
 Enter operation (+, -, *, /) or command (help, history, exit): exit
 Goodbye!
+```
 
+---
 
-**Testing**
+## 🧪 Testing
 
 Run all tests with coverage:
 
+```bash
 pytest --cov=app --cov-report=term-missing
+```
 
+Enforce 100% coverage:
 
-**Enforce 100% coverage:**
-
+```bash
 pytest --cov=app --cov-fail-under=100
+```
 
-**output:**
+Example Coverage Output:
+
+```bash
 ---------- coverage: platform darwin ----------
 Name                          Stmts   Miss  Cover
 -------------------------------------------------
@@ -108,3 +134,4 @@ app/calculator/cli.py            29      0   100%
 app/operation/__init__.py        30      0   100%
 -------------------------------------------------
 TOTAL                           101      0   100%
+```
